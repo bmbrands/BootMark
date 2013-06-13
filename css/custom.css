@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.fixedbackground img {
+    height: auto;
+    left: 0px;
+    min-height: 100%;
+    min-width: 1280px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+.bootmark-content {
+    background-color: #FFF;
+    min-height: 800px;
+    padding: 30px;
+}
+
+section,
+.bootmark-section {
+    padding: 70px 0px 0px;
+}
+
+section.first {
+    padding: 0px 0px 150px;
+}
