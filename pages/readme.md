@@ -47,14 +47,34 @@ This is a sampe configuration file:
     require_once 'css/fonts.php';
 
     $CFG = new stdClass();
-    $CFG->wwwroot = 'http://clue/bmbr/bootmark';
-    $CFG->sitename = 'BootMark';
-    $CFG->font = 'Roboto';
-    $CFG->background = 'images/scenegreen.jpg';
+    $CFG->wwwroot = 'http://www.basbrands.nl/bootmark';
+    $CFG->sitename = 'BOOTMARK';
+    //$CFG->font = 'Roboto';
+    $CFG->font = 'OpenSans';
+    //$CFG->font = 'NewsCycle';
+    $CFG->background = 'images/background.png';
 
-    $CFG->pages = array('index.php'=>'Home',
-                        'example.php'=>'Example',
-                        'readme.php'=>'Readme');
+    $CFG->pages = array(
+                        'index'=>'Home',
+                        'example'=>'Examples',
+                        'readme'=>'Read Me!');
+
+
+    $example_subnavitems = array(
+                        '#markdown'=>'Markdown',
+                        '#headers'=>'Headers',
+                        '#links'=>'Links',
+                        '#images'=>'Images',
+                        '#lists'=>'Lists',
+                        '#tables'=>'Tables',
+                        );
+
+    $readme_subnavitems = array(
+                        '#about'=>'About',
+                        '#config'=>'Config',
+                        '#markdownusage'=>'Using Markdown',
+                        '#sections'=>'Sections'
+                        );
 
 All you need to change is
 
@@ -77,20 +97,8 @@ To work with this framework you will need some basic HTML knowledge.
 
 To add a new page:
 
-    1. copy index.php to somenewpagename.php
-    2. copy index.md to somenewpagename.php
-    3. add a link to somenewpagename.php in the file header.php
-    4. edit somenewpagename.php
-
-    change
-
-    $text = file_get_contents('index.md');
-
-    to
-
-    $text = file_get_contents('somenewpagename.md');
-
-    5. optionally: change the left menu
+    1. Edit the $CFG->pages. Add pagename
+    2. Add a markdown file to the pages folder
 
 
 
@@ -100,7 +108,6 @@ Markdown is a very very simple programming language, designed for
 non programmers. Markdown does not do anything by itself. It is simply
 a way of writing text that makes tranforming it into HTML easy and quick.
 
-Look at the file /example.php in your webbrowser
 
 Open the file example.md in your editor.
 
