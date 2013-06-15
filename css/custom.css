@@ -1,27 +1,55 @@
 @CHARSET "UTF-8";
 
-.fixedbackground img {
-    height: auto;
-    left: 0px;
-    min-height: 100%;
-    min-width: 1280px;
+.fixedbackground {
+    background-image: url("../images/background.png");
+    height: 5000px;
+    left: 0;
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100%;
     z-index: -1;
 }
 
 .bootmark-content {
-    background-color: #FFF;
     min-height: 800px;
-    padding: 30px;
+    padding: 20px 30px 0px;
+}
+
+.bootmark-heading {
+    margin-top: 40px;
+}
+
+/*
+Sections are used for the left menus
+*/
+section {
+    padding-top: 100px;
 }
 
 section,
 .bootmark-section {
-    padding: 70px 0px 0px;
+    padding: 85px 0px 0px;
 }
 
-section.first {
+.bootmark-section.first {
     padding: 0px 0px 150px;
 }
+
+/*
+Add some space for the left menu
+*/
+.bootmark-sidenav.affix {
+    top: 80px !important;
+}
+
+/*
+This page has a max width
+*/
+.bootmark-wrapper,
+.navbar-inner {
+    max-width: 1001px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+}
+

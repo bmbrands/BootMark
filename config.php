@@ -5,14 +5,31 @@ require_once 'css/fonts.php';
 
 $CFG = new stdClass();
 $CFG->wwwroot = 'http://clue/bmbr/bootmark';
-$CFG->sitename = 'BootMark';
-$CFG->font = 'Roboto';
-//$CFG->font = 'OpenSans';
+$CFG->sitename = 'BOOTMARK';
+//$CFG->font = 'Roboto';
+$CFG->font = 'OpenSans';
 //$CFG->font = 'NewsCycle';
-$CFG->background = 'images/scenegreen.jpg';
+$CFG->background = 'images/background.png';
 
-$CFG->pages = array('index.php'=>'Home',
-                    'example.php'=>'Example',
-                    'readme.php'=>'Readme');
+$CFG->pages = array(
+                    'index'=>'Home',
+                    'example'=>'Examples',
+                    'readme'=>'Read Me!');
 
+
+$example_subnavitems = array(
+                    '#markdown'=>'Markdown',
+                    '#headers'=>'Headers',
+                    '#links'=>'Links',
+                    '#images'=>'Images',
+                    '#lists'=>'Lists',
+                    '#tables'=>'Tables',
+                    );
+
+$readme_subnavitems = array(
+                    '#about'=>'About',
+                    '#config'=>'Config',
+                    '#markdownusage'=>'Using Markdown',
+                    '#sections'=>'Sections'
+                    );
 
